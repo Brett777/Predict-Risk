@@ -1,3 +1,8 @@
+methods
+statmod
+stats
+graphics
 RCurl
 jsonlite
-h2o
+tools
+utils
