@@ -44,22 +44,5 @@ Revolving_Cr_Util=37
 Total_Accounts=6
 Longest_Credit_Length=97
 
-# Create a sample frame for testing
-newLoanApplication <- data.frame('Loan_Amount' = Loan_Amount,
-                                 'Term' = Term,
-                                 'Interest_Rate' = Interest_Rate, 
-                                 'Employment_Years' = Employment_Years,
-                                 'Home_Ownership' = Home_Ownership,
-                                 'Annual_Income' = Annual_Income,
-                                 'Verification_Status'= Verification_Status,
-                                 'Loan_Purpose' = Loan_Purpose,
-                                 'State' = State,
-                                 'Debt_to_Income' = Debt_to_Income,
-                                 'Delinquent_2yr' = Delinquent_2yr,
-                                 'Revolving_Cr_Util' = Revolving_Cr_Util,
-                                 'Total_Accounts' = Total_Accounts,
-                                 'Longest_Credit_Length' = Longest_Credit_Length)
-
-head(newLoanApplication)
 
 approveLoan(Loan_Amount,Term,Interest_Rate,Employment_Years,Home_Ownership,Annual_Income,Verification_Status,Loan_Purpose,State,Debt_to_Income,Delinquent_2yr,Revolving_Cr_Util,Total_Accounts,Longest_Credit_Length)
