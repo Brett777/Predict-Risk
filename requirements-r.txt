@@ -1,1 +1,1 @@
-install.packages("h2o", type="source", repos="http://h2o-release.s3.amazonaws.com/h2o/rel-vajda/2/R")
+h2o
