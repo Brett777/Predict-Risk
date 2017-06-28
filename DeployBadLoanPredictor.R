@@ -6,7 +6,7 @@ h2o.init(nthreads = 1, max_mem_size = "1500m")
 approveLoan <- function(Loan_Amount,Term,Interest_Rate,Employment_Years,Home_Ownership,Annual_Income,Verification_Status,Loan_Purpose,State,
                         Debt_to_Income,Delinquent_2yr,Revolving_Cr_Util,Total_Accounts,Longest_Credit_Length){
 
-  newLoanApplication <- data.frame('Loan_Amount' = Loan_Amount,
+  loanApplication <- data.frame('Loan_Amount' = Loan_Amount,
                                    'Term' = Term,
                                    'Interest_Rate' = Interest_Rate, 
                                    'Employment_Years' = Employment_Years,
@@ -21,7 +21,7 @@ approveLoan <- function(Loan_Amount,Term,Interest_Rate,Employment_Years,Home_Own
                                    'Total_Accounts' = Total_Accounts,
                                    'Longest_Credit_Length' = Longest_Credit_Length)
   
-  newLoanApplicationH2O <- as.h2o(newLoanApplication)
+  newLoanApplicationH2O <- as.h2o(loanApplication)
   loanApprover <- h2o.loadModel(path = "LoanApprover.model")
   prediction = h2o.predict(object = loanApprover, newdata = newLoanApplicationH2O)
  return(prediction)
