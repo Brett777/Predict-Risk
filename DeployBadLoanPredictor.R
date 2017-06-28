@@ -1,3 +1,11 @@
+pkgs <- c("statmod","RCurl","jsonlite")
+for (pkg in pkgs) {
+  if (! (pkg %in% rownames(installed.packages()))) { install.packages(pkg) }
+}
+
+# Now we download, install and initialize the H2O package for R.
+install.packages("h2o", type="source", repos="http://h2o-release.s3.amazonaws.com/h2o/rel-vajda/2/R")
+
 library(h2o)
 h2o.init(nthreads = 1, max_mem_size = "1500m")
 
