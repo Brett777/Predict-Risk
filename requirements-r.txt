@@ -1,4 +1,3 @@
-statmod
 RCurl
 jsonlite
 h2o
