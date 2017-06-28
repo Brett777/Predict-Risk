@@ -1,1 +1,2 @@
 libcurl4-openssl-dev
+openjdk-8-jre
