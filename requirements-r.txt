@@ -6,3 +6,4 @@ RCurl
 jsonlite
 tools
 utils
+h2o
