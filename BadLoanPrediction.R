@@ -30,7 +30,7 @@ response <- "Bad_Loan"
 
 
 # Use all other columns (except for the name) as predictors
-predictors <- setdiff(names(customer360), c(response)) 
+predictors <- setdiff(names(customer360), c(response, "RowID", "Interest_Rate")) 
 
 
 # Split dataset giving the training dataset 75% of the data
@@ -53,8 +53,6 @@ LoanApprover
 h2o.varimp_plot(LoanApprover)
 # h2o.partialPlot(object = LoanApprover, data = customer360.train, cols = c("Interest_Rate", "Annual_Income"))
 
-h2o.saveModel(object = LoanApprover, path="Models")
+#h2o.saveModel(object = LoanApprover, path="Models")
 
-h2o.predict(object = LoanApprover, newdata = customer360.test)
-
-h2o.clusterInfo()
+#h2o.predict(object = LoanApprover, newdata = customer360.test)
