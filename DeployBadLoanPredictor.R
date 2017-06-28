@@ -27,5 +27,7 @@ approveLoan <- function(Loan_Amount,Term,Interest_Rate,Employment_Years,Home_Own
   #newLoanApplicationH2O = h2o.importFile(path = "loanApplication.csv")
   loanApprover <- h2o.loadModel(path = "LoanApprover.model")
   prediction = h2o.predict(object = loanApprover, newdata = newLoanApplicationH2O)
- return(prediction)
+  pred = as.data.frame(prediction)
+  toString(pred)
+ return(pred)
 }
