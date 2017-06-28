@@ -21,7 +21,7 @@ approveLoan <- function(Loan_Amount,Term,Interest_Rate,Employment_Years,Home_Own
                                 'Total_Accounts' = Total_Accounts,
                                 'Longest_Credit_Length' = Longest_Credit_Length)
   
-  newLoanApplicationH2O.hex <- as.h2o(loanApplication)
+  newLoanApplicationH2O.hex = as.h2o(x = loanApplication, destination_frame = "newLoanApplicationH2O.hex")
   loanApprover <- h2o.loadModel(path = "LoanApprover.model")
   prediction = h2o.predict(object = loanApprover, newdata = newLoanApplicationH2O.hex)
  return(prediction)
