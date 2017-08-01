@@ -56,3 +56,5 @@ h2o.varimp_plot(LoanApprover)
 #h2o.saveModel(object = LoanApprover, path="Models")
 
 #h2o.predict(object = LoanApprover, newdata = customer360.test)
+
+updated the script...
